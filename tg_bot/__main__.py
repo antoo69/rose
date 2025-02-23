@@ -19,19 +19,20 @@ from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
 
-*ഹായ് {}, എന്റെ പേര് {}!*
+Hi {}, my name is {}! I am a powerful admin bot managed by [this person](tg://user?id={}).  
 
-*ഞാൻ* [ഇദ്ദേഹം](tg://user?id={}) *നോക്കി നടത്തുന്ന ഒരു അടിപൊളി അഡ്മിൻ ബോട്ടാണ്.*
+I was built using Python 3 with the python-telegram-bot library. I am completely open-source, and you can check my code [here](https://youtu.be/wKL90i3cjPw).  
 
-*എന്നെ നിർമ്മിച്ചിരിക്കുന്നത് python3 യിൽ python-telegram-bot ലൈബ്രറി ഉപയോഗിച്ചാണ്. ഞാൻ പൂർണ്ണമായിട്ടും ഓപ്പൺസോഴ്സ്ഡ് ആണ്. എന്റെ കോഡ് നിങ്ങൾക്ക് തായ കാണുവാൻ സാധിക്കും.*
+If you want to create an admin bot like me, watch the video linked below.  
 
-*എന്നെപ്പോലെ ഒരു അഡ്മിൻ ബോട്ടിനെ ഉണ്ടാക്കുവാൻ താഴെ കൊടുത്തിരിക്കുന്ന വീഡിയോ കാണുക.*
+Subscribe to the update channel to stay informed about my updates and features.  
 
-*എന്റെ അപ്ഡേറ്റുകളെക്കുറിച്ചും പ്രവർത്തനത്തെപറ്റിയും അറിയുവാൻ അപ്ഡേറ്റ് ചാനൽ സബ്സ്ക്രൈബ് ചെയ്യുക.*
+Also, don't forget to subscribe to the Tech Gaming YouTube channel below.  
 
-*ലഭ്യമായ കമാന്റുകളെപ്പറ്റി അറിയുവാൻ /help അമർത്തുക.*
+Press /help to learn about the available commands.  
 
 """
+
 
 HELP_STRINGS = """
 Hey there! My name is *{}*.
@@ -50,7 +51,7 @@ And the following:
 
 DONATE_STRING = """ *🙋‍♂️Hello Bro or Sis*!
 
-*😎Contect @Mrk_YT*
+*😎Contact @Fsyrl9*
 
 *👉Clcik 👉 /donate*
 """
@@ -151,10 +152,10 @@ def start(bot: Bot, update: Update, args: List[str]):
 
                 parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup(
                     [[InlineKeyboardButton(text="⭕️ Command Help ⭕️", url="https://t.me/{}?start=help".format(bot.username))],
-                     [InlineKeyboardButton(text="📢Updates", url="t.me/mo_tech_yt"), InlineKeyboardButton(text="❣️Video", url="https://youtu.be/wKL90i3cjPw"), InlineKeyboardButton(text="🤠Credits", url="https://github.com/jithumon/tgbot/graphs/contributors")],
+                     [InlineKeyboardButton(text="📢Updates", url="t.me/mo_tech_yt"), InlineKeyboardButton(text="Support", url="https://t.me/FerdiSupport"), InlineKeyboardButton(text="🤠Credits", url="https://t.me/Galerifsyrl")],
                      [InlineKeyboardButton(text="➕ Add me to your group ➕", url="t.me/{}?startgroup=true".format(bot.username)) ]]))
     else:
-        update.effective_message.reply_text("ചത്തിട്ടില്ലാ...")
+        update.effective_message.reply_text("Not dead...")
 
 
 # for test purposes
